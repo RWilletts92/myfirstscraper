@@ -18,8 +18,8 @@ root = lxml.html.fromstring(html)
 print(root.cssselect("div#footer"))
 print(root)
 listofmatches=root.cssselect('a')
-record=()
-for match in listofmatches:
+record={}
+  for match in listofmatches:
   print(match)
   print(lxml.html.tostring(match))
   record['link']=lxml.html.tostring(match)
