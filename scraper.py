@@ -15,7 +15,7 @@ print(html)
 # # divalign left is looking for a match. we wont see the results unless we add a list
 # # the printed lists always produce a list either though there are matches
 root = lxml.html.fromstring(html)
-print(root.cssselect("a"))
+print(root.cssselect("div#footer"))
 # # div is a HTML tag, a is the tag a for anchor, href is an attribute they have values, align is attribute
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
