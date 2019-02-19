@@ -24,7 +24,7 @@ for match in listofmatches:
   print(lxml.html.tostring(match))
   record['link']=lxml.html.tostring(match)
   print(record)
-  scraperwiki.sqlite.save(unique_keys=['link'], data=record)
+  scraperwiki.sql.save(unique_keys=['link'], data=record)
 # # div is a HTML tag, a is the tag a for anchor, href is an attribute they have values, align is attribute
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
