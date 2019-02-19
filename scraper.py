@@ -20,6 +20,7 @@ print(root)
 listofmatches=root.cssselect('a')
 for match in listofmatches:
   print(match)
+  print(lxml.html.tostring(match)
 # # div is a HTML tag, a is the tag a for anchor, href is an attribute they have values, align is attribute
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
