@@ -13,10 +13,10 @@ print(html)
 # #lexml.html is a library created earlier converts webpages to a stucture that can be drilled down best read right to left. 
 # #fromstring converts a string of characters into something that can be drilled. You dont need to remember all these details
 # # divalign left is looking for a match. we wont see the results unless we add a list
-# #
+# # the printed lists always produce a list either though there are matches
 root = lxml.html.fromstring(html)
-print(root.cssselect("div[align='left']"))
-#
+print(root.cssselect("a"))
+# # div is a HTML tag, a is the tag a for anchor, href is an attribute they have values, align is attribute
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
 #
