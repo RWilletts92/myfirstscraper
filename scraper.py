@@ -16,6 +16,7 @@ print(html)
 # # the printed lists always produce a list either though there are matches
 root = lxml.html.fromstring(html)
 print(root.cssselect("div#footer"))
+print(root)
 # # div is a HTML tag, a is the tag a for anchor, href is an attribute they have values, align is attribute
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
