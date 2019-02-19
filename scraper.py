@@ -9,9 +9,13 @@ print('hello')
 html = scraperwiki.scrape("http://foo.com")
 print(html)
 #
-# # Find something on the page using css selectors
+# # Find something on the page using css selectors - root is creating a new variable - root is arbitary (html) is the variable just created. 
+# #lexml.html is a library created earlier converts webpages to a stucture that can be drilled down best read right to left. 
+# #fromstring converts a string of characters into something that can be drilled. You dont need to remember all these details
+# # divalign left is looking for a match. we wont see the results unless we add a list
+# #
 root = lxml.html.fromstring(html)
-root.cssselect("div[align='left']")
+print(root.cssselect("div[align='left']"))
 #
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
